@@ -45,12 +45,6 @@
             <button type="button" class="color-order" data-modal-open>
                 Order Service
             </button>
-            <div class="backdrop is-hidden" data-modal>
-                <div class="modal">
-                TEXT
-            <button data-modal-close>Close</button>
-            </div>
-            </div>
         </section>
         <section class="list strategy"><!--Друга секція-->
             <div class="container">
@@ -426,7 +420,17 @@
     </div> -->
     
     </footer>
-    <script src="./js/modal.js"></script>
+    <div data-modal class="window is-hidden">
+        <div class="window-modal">
+            <button type="button" data-modal-close class="modal-close">
+                <svg width= "8" height = "8" class="icon-modal">
+                    <use href = "./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+            </div>
+        
+            <script src="./js/modal.js"></script>
 </body>
 
 </html>
