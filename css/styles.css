@@ -11,6 +11,7 @@
     --text-small: #434455;
     --color-studio: #2e2f42;
     --team-text: #2e2f42;
+    --social: #4d5ae5;
 }
 body{
     font-family: "Roboto", sans-serif;
@@ -78,18 +79,30 @@ img{
     letter-spacing: 0.02em;
     color: var(--color-studio);
     padding: 24px 0;
-}
-.menu:hover{
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ .menu:hover{
     color: #404BBF;
 }
 .menu:focus{
-    color: #404BBF;
+     color: #404BBF;
 }
-.menu:active::after, .menu:active::before{
-    content: "";
-    border: 4px solid #404BBF;
-    position: absolute;
+.mod{
+    position: relative;
+    color: #404bbf;
     
+}
+
+.mod::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    width: 100%;
 }
 .contacts{
     font-style: normal;
@@ -166,6 +179,8 @@ gap: 10px;
 display: block;
 border-radius: 4px;
 margin: 0 auto;
+transition: background-color  250ms cubic-bezier(0.4, 0, 0.2, 1);
+;
 }
 .color-order:hover, .color-order:focus{
     color: #FFFFFF;
@@ -205,6 +220,7 @@ margin: 0 auto;
    background-repeat: no-repeat;
    background-size: cover;
    padding: 188px 0;
+   max-width: 1440px;
 }
 .fourth-section{
    background-color: #F4F4FD;
@@ -227,6 +243,7 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 .start{
     border-bottom: 1px solid #e7e9fc;
     padding: 24px 0;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-head{
     display: flex;
@@ -295,7 +312,7 @@ gap: 24px;
    width: calc((100% - 48px) / 3);
 }
 .people{
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 .people-name{
     text-align: center;
@@ -387,16 +404,23 @@ transform: translateY(0);
     justify-content: center;
     background-color: #f4f4fd;
     margin-bottom: 8px;
+    border-radius: 4px;
 }
 .social-icon{
     border: 1px solid #4D5AE5;
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    background-color: #404BBF;
+    background-color: var(--social);
     align-items: center;
     justify-content: center;
+}
+.social-icon:hover{
+    background-color: #404BBF;
+}
+.social-icon:focus{
+    background-color: #404BBF;
 }
 .social{
     display:flex;
@@ -407,10 +431,14 @@ transform: translateY(0);
 }
 .social-u{
     display: flex;
-    align-items: center     ;
+    align-items: center;
 }
 .social-l{
-    
+    width: 40px;
+    height: 40px;
+}
+.social-color{
+    fill:#f4f4fd;
 }
 .costum{
     display: flex;
