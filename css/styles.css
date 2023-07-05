@@ -453,7 +453,7 @@ transform: translateY(0);
     margin: 0 auto;
 }
 .icon-costum{
-    border: 1px solid  #8E8F99;    
+    /* border: 1px solid  #8E8F99;     */
     width: calc((100% - 120px) / 6);
     height: 88px;
     /* height: 100%; */
@@ -686,4 +686,7 @@ transform: translateY(0);
 }
 .modal-close-button:focus .icon-modal{
     fill: #ffffff;
+}
+.fill{
+    fill:#2E2F42;
 }
